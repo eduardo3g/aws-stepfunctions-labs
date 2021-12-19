@@ -11,9 +11,13 @@ class NumberIsTooBig extends Error {
 }
 
 module.exports.double = async (n) => {
-  if (n > 15) {
+  if (n > 50) {
     throw new NumberIsTooBig(n);
   }
 
+  return n * 2;
+};
+
+module.exports.doubleBigNumber = async (n) => {
   return n * 2;
 };
